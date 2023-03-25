@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+
+.navbar h1{
+    color: #fff;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: .2s;
+}
+
+.navbar .logo{
+    text-transform: uppercase;
+}
+
+a:hover{
+    color: orange;
+}
+
+header{
+    position: relative;
+    background-image: url(./img/lexi-anderson-G8wPrJyNqWQ-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    background-color: #000000;
+    z-index: 10;
+}
+
+.navbar ul{
+    align-items: center;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.navbar .toggle-btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action-btn{
+    position: relative;
+    background: linear-gradient(110deg,
+    orange,
+    rgb(255, 192, 75));
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 0;
+    display: inline-block;
+}
+
+.action-btn:hover{
+    color: #fff;
+}
+
+/* dropdown menu */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    height: 0;
+    top: 60px;
+    width: 300px;
+    background-color: #212121;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+}
+
+.dropdown-menu.open{
+    height: 240px;
+}
+
+.dropdown-menu li {
+    padding: 1rem;
+    text-align: center;
+}
+
+.dropdown-menu .last-btn{
+    background: linear-gradient(230deg,
+    orange,
+    rgb(255, 192, 75));
+    padding: .5rem 2rem;
+    font-size: 2rem;
+    position: relative;
+    font-weight: bold;
+}
+
+/* hero */
+.hero-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .container{
+    padding-top: 5rem;
+    color: #fff;
+}
+
+.container{
+    width: 40%;
+    padding: 2rem;
+    background-color: #000000c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container h1{
+    margin: 1rem;
+}
+
+.container h2{
+    margin: .5rem;
+}
+
+.container .action-btn-2{
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(40deg,
+    orange,
+    rgb(255, 192, 75));
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container .action-btn-2:hover{
+    color: #fff;
+}
+/* banner */
+
+.banner{
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(120deg,
+    orange,
+    rgb(255, 192, 75));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 10px 38px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 38px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 38px 0px rgba(0,0,0,0.75);
+}
+
+/* galery */
+
+img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev{
+    left: 0;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .galery-section{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .galery-section .container{
+    background: linear-gradient(220deg,
+    orange,
+    rgb(255, 192, 75));
+    width: 100%;
+  }
+
+
+
+
+/* about */
+
+.container-3{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    padding: 0 5rem;
+}
+
+.about-item-1,
+.about-item-2{
+    width: 40%;
+    margin: 2rem 0;
+}
+
+.about-item-1{
+    display: flex;
+    align-items: center;
+}
+
+.about-item-1 h1{
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.about-item-1 p{
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.about-item-1 span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-item-2{
+    background-color: rgba(255, 0, 0, 0);
+    height: 600px;
+    width: 50%;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;
+}
+
+.photo{
+    background-image: url(./img/about-section.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p{
+    font-size: 1.2rem;
+    
+}
+
+footer a{
+    margin-left: 1rem;
+}
+
+/* responsive */
+
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    .galery-section .overlay{
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar{
+        padding: 0 1rem;
+    }
+    
+    .dropdown-menu{
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar h1{
+        font-size: 1.5rem;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .container h1{
+        text-align: center;
+    }
+
+    .galery-item-1,
+    .galery-item-2{
+        flex-direction: column;
+    }
+
+    .galery-section{
+        width: 100%;
+    }
+
+    .container-3{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-item-1,
+    .about-item-2{
+        width: 90%;
+        margin: 2rem auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-item-2{
+        height: 400px;
+    }
+
+    footer{
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .container-3{
+        padding: 0;
+    }
+}
